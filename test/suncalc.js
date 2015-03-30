@@ -13,11 +13,6 @@ describe("Sun calculations", function () {
 
 	var result;
 
-	it("should return correct position of sun", function () {
-		assert(near(result.position.azimuth, -2.5003175907168385));
-		assert(near(result.position.altitude, -0.7000406838781611));
-	});
-
 	it("should return correct times of sun events", function () {
 		assert.equal(Math.floor(result.sunrise.getTime()/1000), 1362458096);
 		assert.equal(Math.floor(result.sunset.getTime()/1000), 1362498417);
