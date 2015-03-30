@@ -19,8 +19,8 @@ describe("Sun calculations", function () {
 	});
 
 	it("should return correct times of sun events", function () {
-		assert.equal(Math.floor(result.sunrise.start.getTime()/1000), 1362458096);
-		assert.equal(Math.floor(result.sunset.finish.getTime()/1000), 1362498417);
+		assert.equal(Math.floor(result.sunrise.getTime()/1000), 1362458096);
+		assert.equal(Math.floor(result.sunset.getTime()/1000), 1362498417);
 	});
 
 });
