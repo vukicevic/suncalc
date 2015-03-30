@@ -3,8 +3,7 @@ SunCalc
 =======
 
 SunCalc is a tiny BSD-licensed JavaScript library for calculating sun position,
-sunlight phases (times for sunrise, sunset, dusk, etc.),
-moon position and lunar phase for the given location and time,
+sunlight phases (times for sunrise, sunset, dusk, etc.)
 created by [Vladimir Agafonkin](http://agafonkin.com/en) ([@mourner](https://github.com/mourner))
 as a part of the [SunCalc.net project](http://suncalc.net).
 
@@ -69,14 +68,6 @@ Returns an object with the following properties (each is a `Date` object):
 | `nauticalDawn`  | nautical dawn (morning nautical twilight starts)                         |
 | `dawn`          | dawn (morning nautical twilight ends, morning civil twilight starts)     |
 
-```javascript
-SunCalc.addTime(/*Number*/ angleInDegrees, /*String*/ morningName, /*String*/ eveningName)
-```
-
-Adds a custom time when the sun reaches the given angle to results returned by `SunCalc.getTimes`.
-
-`SunCalc.times` property contains all currently defined times.
-
 
 ### Sun position
 
@@ -90,60 +81,6 @@ Returns an object with the following properties:
  e.g. `0` at the horizon and `PI/2` at the zenith (straight over your head)
  * `azimuth`: sun azimuth in radians (direction along the horizon, measured from south to west),
  e.g. `0` is south and `Math.PI * 3/4` is northwest
-
-
-### Moon position
-
-```javascript
-SunCalc.getMoonPosition(/*Date*/ timeAndDate, /*Number*/ latitude, /*Number*/ longitude)
-```
-
-Returns an object with the following properties:
-
- * `altitude`: moon altitude above the horizon in radians
- * `azimuth`: moon azimuth in radians
- * `distance`: distance to moon in kilometers
-
-
-### Moon illumination
-
-```javascript
-SunCalc.getMoonIllumination(/*Date*/ timeAndDate)
-```
-
-Returns an object with the following properties:
-
- * `fraction`: illuminated fraction of the moon; varies from `0.0` (new moon) to `1.0` (full moon)
- * `phase`: moon phase; varies from `0.0` to `1.0`, described below
- * `angle`: midpoint angle in radians of the illuminated limb of the moon reckoned eastward from the north point of the disk;
- the moon is waxing if the angle is negative, and waning if positive
-
-Moon phase value should be interpreted like this:
-
-| Phase | Name            |
-| -----:| --------------- |
-| 0     | New Moon        |
-|       | Waxing Crescent |
-| 0.25  | First Quarter   |
-|       | Waxing Gibbous  |
-| 0.5   | Full Moon       |
-|       | Waning Gibbous  |
-| 0.75  | Last Quarter    |
-|       | Waning Crescent |
-
-### Moon rise and set times
-
-```js
-SunCalc.getMoonTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude)
-```
-
-Returns an object with the following properties:
-
- * `rise`: moonrise time as `Date`
- * `set`: moonset time as `Date`
- * `alwaysUp`: `true` if the moon never rises/sets and is always _above_ the horizon during the day
- * `alwaysDown`: `true` if the moon is always _below_ the horizon
-
 
 ## Changelog
 
