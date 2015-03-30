@@ -9,7 +9,6 @@ describe("Sun calculations", function () {
 
 	before(function () {
 		result = suncalc(new Date('2013-03-05UTC'), 50.5, 30.5);
-		console.log(result);
 	});
 
 	var result;

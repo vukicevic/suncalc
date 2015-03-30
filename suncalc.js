@@ -9,7 +9,7 @@
 
 module.exports = function (date, lat, lng) {
 
-	var sin  = Math.sin,
+  var sin  = Math.sin,
       cos  = Math.cos,
       tan  = Math.tan,
       asin = Math.asin,
@@ -109,14 +109,15 @@ module.exports = function (date, lat, lng) {
     return fromJulian(getTime(angle, false));
   }
 
-	return {
+  return {
 
-		  "position" : getPosition()
+      "position" : getPosition()
     , "dawn"     : { "astronomical" : getMorningTime(-18), "civil" : getMorningTime(-6), "nautical" : getMorningTime(-12) }
     , "dusk"     : { "astronomical" : getEveningTime(-18), "civil" : getEveningTime(-6), "nautical" : getEveningTime(-12) }
+    , "extrema"  : { "noon" : null, "nadir" : null}
     , "sunrise"  : { "start" : getMorningTime(-0.833), "finish" : getMorningTime(-0.3) }
     , "sunset"   : { "start" : getEveningTime(-0.3), "finish" : getEveningTime(-0.833) }
 
-	};
+  };
 
 }

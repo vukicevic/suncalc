@@ -1,7 +1,7 @@
 {
   "name": "suncalc",
   "version": "2.0.0",
-  "description": "A tiny JavaScript library for calculating sun positions.",
+  "description": "A wee JavaScript library for calculating sun positions. Forket from https://github.com/mourner/suncalc",
   "homepage": "https://github.com/vukicevic/suncalc",
   "keywords": [
     "sun",
@@ -15,19 +15,13 @@
   "author": "Nenad Vukicevic",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mourner/suncalc.git"
+    "url": "git://github.com/vukicevic/suncalc.git"
   },
   "main": "suncalc.js",
   "devDependencies": {
     "mocha": "latest"
   },
   "scripts": {
-    "test": "jshint suncalc.js test.js && node test.js | faucet",
-    "cov": "istanbul cover test.js -x test.js"
-  },
-  "jshintConfig": {
-    "quotmark": "single",
-    "trailing": true,
-    "unused": true
+    "test": "mocha test/suncalc.js"
   }
 }
